@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- Define the hash variable before including script.js -->
+    <script>
+        window.shopHash = "{{ hash }}";
+    </script>
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="tabbar">
+            <a href="/" class="tab active">Home</a>
+            <a href="/docs" class="tab">API Docs</a>
+        </div>
+    </nav>
+    <main>
+        <div class="buttons">
+            <button id="itemShopBtn" class="toggle-button active">Item Shop</button>
+            <button id="ogBtn" class="toggle-button">OG</button>
+        </div>
+        <div id="content">
+            <img id="shopImage" src="/shops/shop-{{ hash }}.jpg" alt="Item Shop">
+        </div>
+    </main>
+
+    <!-- Modal for enlarged image -->
+    <div id="imageModal">
+        <span id="closeModal">&times;</span>
+        <div id="modalContent">
+            <img id="modalImage" src="" alt="Enlarged Image">
+        </div>
+    </div>
+</body>
+</html>
