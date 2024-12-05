@@ -477,7 +477,7 @@ async def get_archive():
 
 # Dependency to check adminKey
 def check_admin_key(adminKey: str = Query(...)):
-    if adminKey != "90313-999":
+    if adminKey != "E":
         raise HTTPException(status_code=401, detail="Invalid admin key")
 
 
